@@ -1,12 +1,34 @@
-liste des critères:
+intro de cette partie :
+
+certains critères ne seront pas traités, tellement ces derniers sont élémentaires :
+notamment : 
 \begin{itemize}
 \item base 3D (gestion caméra, scène)
+\item maintenabilité (bonne communauté active)
+	\item multi-plateforme (tablette aussi)
+\end{itemize}
+
+choix de ne pas utiliser opengl : qqch qui encapsule opengl plutôt -> pour la facilité d'utilisation
+
+
+
+liste des critères: \\
+\begin{tabular}{l|c|c|c|c|c|c}
+\hspace{-2cm}
+Bibliothèque & open source & moteur physique & auto-suffisant & langage & taille & maintenabilité \\
+OpenFrameworks & & & & & & \\
+OpenSceneGraph & & & & & & \\
+OGRE & & & & & & \\
+Qt3D & & & & & & \\
+Unity & & & & & & \\
+Babylon.js & & & & & & \\
+\end{tabular}
+\begin{itemize}
+
 \item open source license GPL
 \item détection de collisions (moteur physique)
 \item auto-suffisant (facilité d'utilisation d'UDP)
 \item unicité du langage avec i-score (C++)
-\item multi-plateforme
 \item taille adaptée au projet (pas de surplus de fonctionnalités)
-\item maintenabilité (bonne communauté active)
-\item maintenabilité 2 (facilité à prendre en main)
+\item maintenabilité  (facilité à prendre en main et à maintenir (stable))
 \end{itemize}
