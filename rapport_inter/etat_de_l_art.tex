@@ -117,54 +117,37 @@
 %\begin{changemargin}{-1cm}{-1cm}
 
 \section{Introduction}
-présenter les différents acteurs
 \input{introduction.tex}
 
 \section{Objectifs}
-explication du résultat à obtenir
+\input{objectif.tex}
 
-- visualisation en 3D de la chorégraphie des robots, à l'aide des données envoyés par i-score 
 
 \section{Existant}
 présentation iscore (gestion d'évènements)
-
+\input{iscore.tex}
 \input{stageviz.tex}
 \input{robotart.tex}
-articles, comparer par rapport à nos objectifs \\
-justifie notre recherche de bibliothèques
+- articles, comparer par rapport à nos objectifs 
+
+- justifier notre recherche de bibliothèques
 
 
 
 \section{Ce qu'on peut utiliser}
-Qt3D -> en cours de développement
 
-OGRE -> ...? 
-
-openframeworks -> installation difficile ?
-
-openscenegraph -> manière différente de visualisation = difficulté à prendre en main (désavantage pour nous et pour les suivants) > difficulté de maintenabilité
-
-opengl -> "trop" de travail pour peu de temps  = avec un langage plus haut niveau, il serait possible de coder en moins de temps pour un résultat équivalent
-
-Blender / unity -> trop lourd ? trop de trucs inutiles 
-				-> pas besoin de modélisation
-				-> plus pour la création que la visualisation, mais à titre comparatif mettre Unity dans le tableau ?\\
-
-Babylon.js / Three.js -> --> moteur 3D javascript utilisant webgl
-		besoin de mettre dans navigateur  ? 
-	javascript : pas adapté pour la suite du projet, a priori le projet dure plus que nos trois mois (environ un an ou deux) donc si on considère le fait que la visualisation devienne sophistiquée (par ex : possibilité de modifier la chorégraphie en elle-même ? pas seulement visualisation mais aussi création) le langage javascript ne semble pas adapté...
-		GROS NEGATIF : difficulté à récupérer les données d'iscore via UDP avec Javascript? (utiliser node.js ?)
-		
-\input{openframeworks.tex}
-\input{openscenegraph.tex}
-bibliothèques, moteurs 3D 
+\input{bib3d_general.tex}
+\input{bib3d_diff.tex}
+%\input{openscenegraph.tex}
 
 
-tableau comparatif selon les critères (taille de la bib)
+
+
 
 \section{choix final}
 \input{critere.tex}
-justification
+%tableau comparatif selon les critères (taille de la bib)
+%justification
 
 \section{Conclusion}
 idée de notre réalisation concrètement
