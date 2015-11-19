@@ -1,73 +1,36 @@
-Pour chaque bib : 
-
-- particularité / explication brève
-
-- domaine d'utilisation
-
-- moteur physique 
-
-- philosophie
-
-- license
-
-- communauté dév et utilisateurs
-
-- stabilité
-
-- desavantages ?
-
 \subsection{OpenSceneGraph}
 
-OpenSceneGraph est une bibliothèque 3D opensource distribuée sous la license OSGPL (OpenSceneGraph Public License) basée sur la license LGPL. Elle est écrite uniquement en C++ Standard et en OpenGL ce qui la rend très portable. \\
-Le monde 3D virtuel est représenté par un graphe dont les noeuds sont logiquement et spatialement organisés. Cette vision pourrait être un problème dans le cadre du projet car nous avons peu de temps et le projet est destiné à être repris dans le futur. De plus, la communauté OpenSceneGraph ne semble pas très active, ce qui pourrait indiquer que peu de gens l'utilise, et probablement les futures personnes reprenant le projet. 
+OpenSceneGraph est une bibliothèque 3D open source distribuée sous la license OSGPL (OpenSceneGraph Public License) basée sur la license LGPL. Elle est écrite en C++ et en OpenGL et est utilisée dans de nombreux domaines: réalité virtuelle, jeux vidéos, visualisation scientifique et simulation. \\
+Le monde 3D virtuel est représenté par un graphe dont les noeuds sont logiquement et spatialement organisés. Cette vision pourrait être un problème dans le cadre du projet car nous avons peu de temps et le projet est destiné à être repris par d'autres personnes. De plus, la communauté OpenSceneGraph ne semble pas très active, ce qui pourrait indiquer que peu de gens l'utilise, et probablement les futures personnes reprenant le projet. 
 
-- communauté : peu active
 
 \subsection{OpenFrameworks}
-- explication : open source/C++/
 
-%- fonctionne avec OpenGL, OpenCV (traitement image pour trajectoires?)
-- philosophie : "it should be collaborative, usable and simple, consistent and intuitive, cross-platform, powerful, and extensible. openFrameworks is also driven by a "do it with others" (DIWO) philosophy"
-
-- désavantage installation difficile ?
-
+OpenFrameworks est aussi open source, sous license MIT (compatible GPL), basée sur du C++ et OpenGL. Elle permet également d'intégrer et d'utiliser d'autres bibliothèques comme OpenCV par exemple, qui pourrait être utilisée pour de la gestion de trajectoires et de collisions, et de gérer des flux audio, ce qui peut s'avérer utile dans l'optique d'embarquer des haut parleurs sur les robots pour générer des sons. \\
+OpenFrameworks est un projet actif dont une des lignes directrices est la simplicité: la bibliothèque est faite de manière à pouvoir être utilisée avec un minimum de connaissances, et propose des tutoriaux sur des bases comme l'OpenGL ou la programmation orientée objet. Ceci est un atout dans notre contexte puisque nous avons peu de temps pour implémenter le projet qui sera ensuite plus facile à reprendre par d'autres personnes.
 
 \subsection{Ogre}
-- explication : open source/C++/
 
-- domaine d'utilisation :  plus tourné jeux vidéos 
+Ogre est encore une biliothèque open source, sous license MIT, écrite en C++ et OpenGL. Elle est beaucoup utilisée pour réaliser des jeux vidéos et faire des modélisations 3D de personnages. Dans notre cas, nous n'avons pas besoin d'aller si loin au niveau du rendu 3D. L'objectif est plus d'avoir un rendu clair et fidèle à la chorégraphie.  
 
-- license : GNU LGPL \\
+% \subsection{Irrlicht}
+% - explication : open source/C++/
 
-\subsection{Irrlicht}
-- explication : open source/C++/
+% - moteur physique : oui avec détection de collision
 
-- moteur physique : oui avec détection de collision
-
-- stabilité : pas très stable 
+% - stabilité : pas très stable 
 
 \subsection{Blender et Unity}
-- explication : Blender : open source
-				Unity : C\# / pas open source
+
+Blender et Unity sont deux logiciels de modélisation et d'animation 3D écrits en C, C++ et Python (Blender) et C\# (Unity). Blender est open source alors que Unity ne l'est pas, même si des licenses gratuites sont proposées. Un des avantages de ces logiciels est leur communauté qui est très active
+De la même manière qu'avec Ogre, ces logiciels se dirigent plus vers du rendu 3D pour des jeux vidéos et de la modélisation 3D alors que notre objectif premier est la visualisation. \\
+De plus, ces logiciels proposent des interfaces pour créer facilement des objets 3D ou des textures par exemple mais ce qui nous intéresse plus est la gestion de ces objets, et cela nous parait mieux de pouvoir la gérer avec du code plutôt que dans une interface graphique. 
 				
-- communauté  : utilisateur active
-
-- domaine d'utilisation : tourné jeux vidéos mais surtout modélisation et pas vraiment visualisation
---> peut être trop de fonctionnalités liées à la modélisation qui nous seraient inutiles...?
-
-- désavantage pour Unity -> pas open source
-
 \subsection{Qt3D}
-- explication : open source/ C++
 
-moteur physique : détection de collision
-
-stabilité : pas vraiment stable = en cours de développement
+Qt est un framework utilisé pour faire des interfaces graphiques. Qt est open source, écrit en C++ sous license GNU GPL ou LGPL selon les versions. Le module Qt3D permet de faire de la modélisation 3D. Cependant, ce module est encore en cours de développement. L'utiliser serait donc prendre le risque de devoir changer plus tard du code déjà écrit, ce qui peut être problématique surtout après que le projet soit repris par d'autres personnes. 
 
 \subsection{Babylon.js et Three.js}
-- explication: moteur 3D javascript utilisant webgl, permet d'avoir un rendu visuel dans le navigateur
 
-- désavantage : 
-		besoin de mettre dans navigateur  ? 
-	javascript : pas adapté pour la suite du projet, a priori le projet dure plus que nos trois mois (environ un an ou deux) donc si on considère le fait que la visualisation devienne sophistiquée (par ex : possibilité de modifier la chorégraphie en elle-même ? pas seulement visualisation mais aussi création) le langage javascript ne semble pas adapté...
-		GROS NEGATIF : difficulté à récupérer les données d'iscore via UDP avec Javascript? (utiliser node.js ?)
+Babylon.js et Three.js sont des bibliothèques javascript qui utilisent WebGL pour avoir un rendu visuel dans le navigateur. Les deux sont open source, mais Three.js est sous license MIT alors que Babylon.js est sous une license Apache, qui cherche encore à être compatible avec la license GPL. L'avantage de ces bibliothèques est que seul un navigateur est nécessaire pour visualiser la scène, ce qui les rend très accessible. Cependant, plus le projet avancera et se complexifiera (possibilité de modifier la chorégraphie par exemple), plus il nous semble compliqué d'utiliser javascript.
+
